@@ -1,13 +1,9 @@
 import $ from "jquery";
 
-const paragraph1 = document.createElement("p");
-const paragraph2 = document.createElement("p");
-const paragraph3 = document.createElement("p");
+$(document).ready(function() {
+  const paragraph1 = $("<p>").text("Holberton Dashboard");
+  const paragraph2 = $("<p>").text("Dashboard data for the students");
+  const paragraph3 = $("<p>").text("Copyright - Holberton School");
 
-paragraph1.textContent = "Holberton Dashboard";
-paragraph2.textContent = "Dashboard data for the students";
-paragraph3.textContent = "Copyright - Holberton School";
-
-document.body.appendChild(paragraph1);
-document.body.appendChild(paragraph2);
-document.body.appendChild(paragraph3);
+  $("body").append(paragraph1, paragraph2, paragraph3);
+});
