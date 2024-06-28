@@ -1,4 +1,13 @@
 div.Notifications {
-    border: .5rem solid red;
+    position: relative;
+    border: .04rem dashed red;
     padding: 1rem;
+}
+
+li {
+    color: blue;
+}
+
+li.urgent {
+    color: red;
 }
