@@ -5,6 +5,9 @@ import {getLatestNotification} from './utils';
 
 export function Notifications() {
 
+    const getNotificationMessage = getLatestNotification();
+    //
+
     const buttonStyle = {
         position: 'absolute',
         right: '10px',
@@ -26,7 +29,7 @@ export function Notifications() {
             <ul>
                 <li>New course available</li>
                 <li className="urgent">New resume available</li>
-                <li className="urgent">{getLatestNotification()}</li>
+                <li className="urgent" dangerouslySetInnerHTML={{__html:getNotificationMessage}}/>
             </ul>
             <button style={buttonStyle} onClick={handleButtonClick} aria-label="Close">
                 <img src={closeIcon} alt="" style={closeIconStyle} />
